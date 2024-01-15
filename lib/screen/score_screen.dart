@@ -151,24 +151,29 @@ class _ScoreScreenState extends State<ScoreScreen> {
                       width: 50,
                     ),
                     Column(children: [
-                      const Text(
+                      Text(
                         'Team B',
                         style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.w400),
+                            fontSize: 30,
+                            fontWeight: FontWeight.w400,
+                            color:
+                                _color == "dark" ? Colors.white : Colors.black),
                       ),
                       const SizedBox(
                         height: 20,
                       ),
                       Container(
                         width: 120,
-                        color: Colors.black,
+                        color: _color == "dark" ? Colors.white : Colors.black,
                         child: Center(
                           child: Text(
                             '$_counterVisitante',
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 60,
                                 fontWeight: FontWeight.w400,
-                                color: Colors.white),
+                                color: _color == "dark"
+                                    ? Colors.black
+                                    : Colors.white),
                           ),
                         ),
                       ),
